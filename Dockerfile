@@ -25,8 +25,14 @@ RUN echo $PATH
 RUN echo $JAVA_HOME
 
 #Copying source code
-#RUN mkdir -p /opt/MockitoPOC/
+RUN mkdir -p /opt/MockitoPOC/
 #COPY MockitoPOC /opt/MockitoPOC/
+RUN mkdir -p /opt/MockitoPOC/src
+RUN mkdir -p /opt/MockitoPOC/target
+COPY src /opt/MockitoPOC/src/
+COPY target /opt/MockitoPOC/target/
+COPY pom.xml /opt/MockitoPOC/pom.xml
+COPY Dockerfile /opt/MockitoPOC/Dockerfile
 
 
 #ENTRYPOINT sh /usr/local/tomcat/apache-tomcat-7.0.61/bin/startup.sh; /bin/bash
