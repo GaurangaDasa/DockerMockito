@@ -6,6 +6,7 @@ MAINTAINER Gaurang Rathod <gaurang@example.com>
 #installing java8
 RUN mkdir -p /opt/java/jdk1.8.0_45
 COPY jdk1.8.0_45 /opt/java/jdk1.8.0_45/
+RUN chmod -R 777 /opt/java/jdk1.8.0_45/
 
 #installing maven 3.0.4
 RUN mkdir -p /opt/apache-maven-3.0.4
