@@ -36,6 +36,6 @@ COPY pom.xml /opt/MockitoPOC/pom.xml
 COPY Dockerfile /opt/MockitoPOC/Dockerfile
 
 
-#ENTRYPOINT sh /usr/local/tomcat/apache-tomcat-7.0.61/bin/startup.sh; /bin/bash
+ENTRYPOINT export PATH=$PATH:$JAVA_HOME/bin:$M2_HOME/bin; /bin/bash
 
 
